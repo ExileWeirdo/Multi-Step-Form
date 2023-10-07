@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: hsl(229, 24%, 87%);
+}
+
+:root{
+    --stepColor: hsl(231, 11%, 63%);
+    --info: white;
+}
+
+
+.containerSelectPlan{
+    display: flex;
+    background: white;
+    padding: 1em;
+    border-radius: 15px;
+    gap: 100px;
+    max-height: 55vh;
+    max-width: 900px;
+}
+
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 5rem;
+}
+
+.text h1{
+    font-size: 2rem;
+    color: black;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.sliderContainer{
+    width: 50px;
+    height: 25px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sliderThumb {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.sliderContainer.monthly .sliderThumb{
+    transform: translateX(5px);
+    background: white;
+}
+
+.sliderContainer.yearly .sliderThumb{
+    transform: translateX(30px);
+}
+
+.slider{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.backButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: gray;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.backButon:hover{
+    text-decoration: underline;
+}
+
+.planOptions{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.planOption {
+    width: 125px;
+    height: 150px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8em;
+    justify-content: space-between;
+}
+
+.arcadeText, .advancedText, .proText{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    cursor: default;
+}
+
+.payment{
+    color: gray;
+}
+
+.text{
+    align-self: flex-start;
+}
+
+.planOption.selected{
+    border: 2px solid black;
+}
+
+.twoMonthsFree{
+    color: hsl(213, 96%, 18%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 0.4rem;
+}
+
+@media only screen and (max-width: 1200px){
+
+    body{
+        align-items: flex-start !important;
+    }
+
+    .containerSelectPlan{
+        flex-direction: column;
+        align-items: center;
+        max-width: 375px !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 0;
+    }
+
+    .sidebar{
+        background: url(/public/bg-sidebar-mobile.svg);
+        flex-direction: row;
+        border-radius: 0;
+        align-items: flex-start;
+        justify-content: center;
+        background-size: cover;
+        gap: 15px;
+        height: 100%;
+        min-height: 172px;
+        
+        
+    }
+
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .step1Info, .step2Info, .step3Info, .step4Info{
+        display: none;
+    }
+
+    #buttonAnimation {
+        background: none;
+    }
+
+    .plan{
+        position: absolute;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 20%;
+        background: white;
+        padding: 1em 2em;
+        border-radius: 20px;
+        height: 560px;
+        width: 90%;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .planOptions{
+        flex-direction: column;
+    }
+
+    .planOption{
+        height: 75px;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}

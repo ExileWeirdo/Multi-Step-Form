@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: hsl(229, 24%, 87%);
+}
+
+:root{
+    --stepColor: hsl(231, 11%, 63%);
+    --info: white;
+}
+
+
+.containerAddons{
+    display: flex;
+    background: white;
+    padding: 1em;
+    border-radius: 15px;
+    max-height: 55vh;
+    width: 900px;
+    flex: 1;
+}
+
+.addOnsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 52vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.text{
+    width: 100%;
+}
+
+.addOns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    
+}
+
+.addon{
+    height: 70px;
+    border: 2px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.addon.selected{
+    border: 1px solid hsl(213, 96%, 18%);
+}
+
+.addonInfo{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.onlineServiceText p, .largerStorageText p, .customizableProfileText p {
+    color: gray;
+}
+
+.price{
+    color: hsl(213, 96%, 18%);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.25); /* IE */
+  -moz-transform: scale(1.25); /* FF */
+  -webkit-transform: scale(1.25); /* Safari and Chrome */
+  -o-transform: scale(1.25); /* Opera */
+  transform: scale(1.25);
+  padding: 10px;
+}
+
+.blueInput{
+    accent-color: hsl(213, 96%, 18%);
+}
+
+@media only screen and (max-width: 1200px){
+
+    body{
+        align-items: flex-start !important;
+    }
+
+    .containerAddons{
+        flex-direction: column;
+        align-items: center;
+        max-width: 375px !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 0;
+    }
+
+    .sidebar{
+        background: url(/public/bg-sidebar-mobile.svg);
+        flex-direction: row;
+        border-radius: 0;
+        align-items: flex-start;
+        justify-content: center;
+        background-size: cover;
+        gap: 15px;
+        height: 100%;
+        min-height: 172px;
+        
+        
+    }
+
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .step1Info, .step2Info, .step3Info, .step4Info{
+        display: none;
+    }
+
+    #buttonAnimation {
+        background: none;
+    }
+
+    .addOnsContainer{
+        position: absolute;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 20%;
+        background: white;
+        padding: 2em 2em;
+        border-radius: 20px;
+        height: 560px;
+        width: 90%;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .addon{
+        width: 100%;
+    }
+
+}

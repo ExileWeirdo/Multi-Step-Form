@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: hsl(229, 24%, 87%);
+}
+
+:root{
+    --stepColor: hsl(231, 11%, 63%);
+    --info: white;
+}
+
+
+.containerSummary{
+    display: flex;
+    background: white;
+    padding: 1em;
+    border-radius: 15px;
+    max-height: 55vh;
+    max-width: 900px;
+    width: 900px;
+}
+
+.summaryContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 52vh;
+    flex: 1;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.text{
+    display: flex;
+    text-align: start;
+}
+
+.changeLink{
+    text-decoration: underline;
+    cursor: pointer;
+    color: gray;
+}
+
+.planAndButton{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.summaryPlan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sectionSeperator{
+    border: 0.1px solid lightgray;
+}
+
+.totalCosts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.planAndButton p, .planCost{
+    font-weight: 700;
+}
+
+.addonsCosts{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.addonsCosts div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: gray;
+}
+
+.addonsText h4{
+    color: black;
+    font-weight: 400;
+}
+
+.totalCost{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.totalCost h2{
+    color: hsl(243, 100%, 62%);
+}
+
+.totalCost p{
+    color: gray;
+}
+
+.thankYouScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin-left: 10%;
+    gap: 20px;
+    margin-bottom: 5%;
+}
+
+.thankYouScreen p{
+    color: gray;
+    line-height: 22.5px;
+    
+}
+
+@media only screen and (max-width: 1200px){
+
+    body{
+        align-items: flex-start !important;
+    }
+
+    .containerSummary{
+        flex-direction: column;
+        align-items: center;
+        max-width: 375px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 0;
+    }
+
+    .sidebar{
+        background: url(/public/bg-sidebar-mobile.svg);
+        width: 100vw;
+        flex-direction: row;
+        border-radius: 0;
+        align-items: flex-start;
+        justify-content: center;
+        background-size: cover;
+        gap: 15px;
+        height: 100%;
+        min-height: 172px;
+        
+        
+    }
+
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .step1Info, .step2Info, .step3Info, .step4Info{
+        display: none;
+    }
+
+    #buttonAnimation {
+        background: none;
+
+    }
+
+    .summaryContainer{
+        position: absolute;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 20%;
+        background: white;
+        padding: 2em 2em;
+        border-radius: 20px;
+        height: 560px;
+        width: 90%;
+        justify-content: flex-start;
+        gap: 70px;
+    }
+
+    .thankYouScreen{
+        position: absolute;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 20%;
+        background: white;
+        padding: 2em 2em;
+        border-radius: 20px;
+        height: 350px;
+        width: 90%;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+
+    .personalInfo{
+        margin-bottom: 0;
+    }
+
+    .btnTwo{
+        margin-top: -77px;
+    }
+
+}
